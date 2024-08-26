@@ -1,0 +1,118 @@
+/* Base styles for the navbar */
+.navbar {
+    background-color: #0072ff; /* Match the footer background color */
+    color: #fff; /* White text color */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 10px 0; /* Adjust padding to match footer */
+    box-sizing: border-box;
+    height: 60px; /* Adjust height if needed */
+    align-self: center;
+    margin: 0 auto;
+}
+
+/* Container for navbar content */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Match the max width of the .App container */
+    margin: 0 auto; /* Center the container */
+    justify-content: space-between; /* Distribute space between hamburger and menu */
+}
+
+/* Hamburger icon styling */
+.navbar-toggle {
+    background: none;
+    border: none;
+    color: #fff; /* White color for hamburger icon */
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem; /* Adjust padding */
+}
+
+/* Menu styling */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: center; /* Center menu items */
+    transition: transform 0.3s ease;
+}
+
+/* Menu item styling */
+.navbar-menu li {
+    margin: 0 15px; /* Adjust margin between menu items */
+}
+
+/* Menu link styling */
+.navbar-menu a {
+    color: #fff; /* White color for menu links */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Adjust padding */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Active menu link styling */
+.navbar-menu a.active {
+    color: #ff6347; /* Change color for the active link */
+    border-bottom: 4px solid #ff6347; /* Optional: underline active link */
+    font-weight: 900;
+}
+
+/* Menu link hover effect */
+.navbar-menu a:hover {
+    color: #ff6347; /* Change hover color if needed */
+}
+
+/* Responsive styles */
+@media (max-width: 804px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #0072ff; /* Match the navbar background color */
+        position: absolute;
+        top: 60px; /* Height of the navbar */
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        margin: 0;
+    }
+
+    .navbar-menu a {
+        padding: 1rem; /* Larger padding for mobile */
+        display: block;
+        text-align: center;
+    }
+
+    .navbar-toggle {
+        display: block; /* Show hamburger menu on mobile */
+    }
+}
+
+@media (min-width: 805px) {
+    .navbar-menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-toggle {
+        display: none; /* Hide hamburger menu on desktop */
+    }
+}
