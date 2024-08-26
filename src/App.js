@@ -31,14 +31,14 @@ const [formData, setFormData] = useState({
 const scrollToTop = () => {
   const element = document.getElementById('projects');
   if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
+    element.scrollIntoView({ behavior: 'auto' });
   }
 };
 
 const scrollToProject = (id) => {
   const element = document.getElementById(id);
   if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
+    element.scrollIntoView({ behavior: 'auto' });
     setActiveProject(id); // Set the clicked project as active
 
   }
@@ -296,17 +296,14 @@ const scrollToProject = (id) => {
 
   return (
     <>
-   
-    <div className="App">
-   
-      <Navbar />
-    
+   <Navbar />
+    <div className="App">   
       <section id="personal-info" className="card personal-info fade-in">
+        <div className="profile-photo-container">
         <img
-          src="/images/profilePhoto.jpeg"
-          alt="Profile"
           className="profile-photo"
         />
+        </div>
         <div className="personal-text">
           <h2>Prabin K C</h2>
           <p>
@@ -467,8 +464,8 @@ const scrollToProject = (id) => {
       <section id="contact" className="card contact fade-in">
         <h3>Contact</h3>
         <div className="contact-info">
-          <p><i className="fas fa-envelope"></i> Email: your-email@example.com</p>
-          <p><i className="fas fa-phone"></i> Phone: +1234567890</p>
+          <p><i className="fas fa-envelope"></i> Email: pkmiracle36@gmail.com</p>
+          <p><i className="fas fa-phone"></i> Phone: +61473654956</p>
         </div>
         <form ref={form} className="contact-form" onSubmit={handleSubmit}>
           <label htmlFor="name">Name:</label>
@@ -508,14 +505,14 @@ const scrollToProject = (id) => {
     <footer className="footer">
     <p>&copy; 2024 Prabin K C. All rights reserved.</p>
     <div className="social-links">
-        <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/prabin-kc/" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin"></i> LinkedIn
         </a>
-        <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/prabinkc2046?tab=repositories" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-github"></i> GitHub
         </a>
-        <a href="https://twitter.com/your-username" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-twitter"></i> Twitter
+        <a href="https://www.youtube.com/channel/UCutEp4mFX4UZBvZw0BO44IQ" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-youtube"></i> CodeMindsTV
         </a>
     </div>
     <div className="quick-links">
