@@ -1,0 +1,86 @@
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px;
+    padding: 20px;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-in-out forwards;
+  }
+  
+  .card:hover {
+    transform: perspective(1000px) rotateX(-3deg) rotateY(3deg); /* Subtle hover effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+  }
+
+  .education {
+    padding: 20px;
+  }
+  
+  .education-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    row-gap: 10px;
+  }
+  .education-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    /* margin-bottom: 20px; */
+    padding: 15px;
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-in-out forwards;
+  
+  }
+  
+  .education-card h4 {
+    margin-bottom: 10px;
+    color: #0072ff;
+  }
+  
+  .education-card i {
+    font-size: 24px; /* Size of the icon */
+    color: #0072ff; /* Icon color */
+    margin-right: 10px;
+  }
+  
+  .subjects {
+    margin-top: 10px;
+  }
+  
+  .subject {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+  
+  .subject-name {
+    font-weight: bold;
+  }
+  
+  .subject-score {
+    color: #0072ff;
+  }
+
+  
+
+/* Mobile-First Approach */
+@media (min-width: 600px) {
+    .education-card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 10px;
+    }
+  
+  }
+  
+  @media (min-width: 735px){
+  
+
+  }
+  
+  @media (min-width: 900px) {
+  
+  }

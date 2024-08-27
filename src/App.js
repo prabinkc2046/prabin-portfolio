@@ -13,7 +13,7 @@ import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
 import PersonalInfo from "./components/PersonalInfo/PersonalInfo";
 import Experience from "./components/Experience/Experience";
-
+import Education from "./components/Education/Education";
 function App() {
 
 const form = useRef();
@@ -118,40 +118,8 @@ const [formData, setFormData] = useState({
         </p>
       </section>
 
-      <section id="education" className="card education fade-in">
-        <h3>Education</h3>
-       <div className="education-card-container">
-       <div className="education-card">
-          <h4>University A</h4>
-          <p>Graduated: 2020</p>
-          <p>Score: 85%</p>
-          <div className="subjects">
-            <div className="subject">
-              <span className="subject-name">Subject 1:</span>
-              <span className="subject-score">90%</span>
-            </div>
-            <div className="subject">
-              <span className="subject-name">Subject 2:</span>
-              <span className="subject-score">80%</span>
-            </div>
-          </div>
-        </div>
-        <div className="education-card">
-          <h4>University B</h4>
-          <p>Graduated: 2022</p>
-          <p>Score: 88%</p>
-          <div className="subjects">
-            <div className="subject">
-              <span className="subject-name">Subject 1:</span>
-              <span className="subject-score">85%</span>
-            </div>
-            <div className="subject">
-              <span className="subject-name">Subject 2:</span>
-              <span className="subject-score">90%</span>
-            </div>
-          </div>
-        </div>
-       </div>
+      <section id="education">
+        <Education />
       </section>
 
       <section id="contact" className="card contact fade-in">

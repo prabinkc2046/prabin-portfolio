@@ -29,56 +29,6 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
 }
 
-/* Education Section */
-.education {
-  padding: 20px;
-}
-
-.education-card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  row-gap: 10px;
-}
-.education-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  /* margin-bottom: 20px; */
-  padding: 15px;
-  opacity: 0;
-  animation: fadeInUp 0.7s ease-in-out forwards;
-
-}
-
-.education-card h4 {
-  margin-bottom: 10px;
-  color: #0072ff;
-}
-
-.education-card i {
-  font-size: 24px; /* Size of the icon */
-  color: #0072ff; /* Icon color */
-  margin-right: 10px;
-}
-
-.subjects {
-  margin-top: 10px;
-}
-
-.subject {
-  display: flex;
-  justify-content: space-between;
-  margin: 5px 0;
-}
-
-.subject-name {
-  font-weight: bold;
-}
-
-.subject-score {
-  color: #0072ff;
-}
-
 /* Contact Section */
 .contact {
   padding: 20px;
@@ -150,33 +100,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Experience Section */
-.experience {
-  padding: 20px;
-}
-
-.experience-container {
-  /* display: flex;
-  flex-direction: column;
-  gap: 20px; */
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  row-gap: 20px;
-}
-
-.experience-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-}
-
-.experience-card h4 {
-  color: #0072ff;
-  margin-bottom: 10px;
 }
 
 /* Testimony Section */
