@@ -14,6 +14,7 @@ import PersonalInfo from "./components/PersonalInfo/PersonalInfo";
 import Experience from "./components/Experience/Experience";
 import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
+import Repository from "./components/Repository/Repository";
 function App() {
 
   const testimonies = [
@@ -66,19 +67,8 @@ function App() {
         </div>
       </section>
 
-      <section id="repositories" className="card repositories fade-in">
-        <h3>Code Repositories</h3>
-        <p>
-          Check out my code repositories on{" "}
-          <a
-            href="https://github.com/your-username"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-github"></i> GitHub
-          </a>
-          .
-        </p>
+      <section id="repositories" >
+       <Repository />
       </section>
 
       <section id="education">

@@ -29,11 +29,7 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
 }
 
-/* Repositories Section */
-.repositories {
-  padding: 20px;
-  text-align: center;
-}
+
 
 /* Fade-in Animation */
 @keyframes fadeInUp {
