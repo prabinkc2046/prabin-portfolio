@@ -12,19 +12,19 @@ export default function Education() {
         <h3>Education</h3>
         <div className="education-card-container">
        
-        {universities.map((uni, index) => (
-            <div className="education-card">
+        {universities.map((uni) => (
+            <div key={uni.name} className="education-card">
             
-                            <div key={index}>
+                            <div >
                                 <h4>{uni.name}</h4>
                                 <p>{uni.degree}</p>
                                 <p>Graduated: {uni.finishedYear}</p>
                                 <p>Score: {uni.score}</p>
                             </div>
-                            <div key={index} className="subjects">
-                            {uni.subjects.map((sub, index) => (
+                            <div className="subjects">
+                            {uni.subjects.map((sub) => (
                                 
-                                <div key={index} className="subject">
+                                <div key={sub.name} className="subject">
                                     <span className="subject-name">{sub.name}:</span>
                                     <span className="subject-score">{sub.score}</span>
                                 </div>

@@ -3,10 +3,9 @@ import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome C
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDatabase, faChartLine, faCodeBranch, faCloud, faServer, faLock, faTools, faFileCode, faCloudUploadAlt, faBacon, faBox, faCube, faCogs } from '@fortawesome/free-solid-svg-icons';
 import { FaArrowUp } from 'react-icons/fa'; // Import icon from react-icons
-
-import Navbar from "./components/Navbar";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';import Navbar from "./components/Navbar";
 import "./App.css";
-import emailjs from '@emailjs/browser';
 
 
 import Projects from "./components/Projects/Projects";
@@ -14,45 +13,8 @@ import Skills from "./components/Skills/Skills";
 import PersonalInfo from "./components/PersonalInfo/PersonalInfo";
 import Experience from "./components/Experience/Experience";
 import Education from "./components/Education/Education";
+import Contact from "./components/Contact/Contact";
 function App() {
-
-const form = useRef();
-
-const [formData, setFormData] = useState({
-  name:'',
-  email:'',
-  message:''
- });
-
- const handleChange = (e) => {
-  const {name, value} = e.target;
-  setFormData({
-    ...formData,
-    [name]: value
-  });
- }
- 
- const handleSubmit = (e) => {
-  e.preventDefault();
-
-  emailjs.sendForm('service_qfie3ob', 'template_bi5zjw4', form.current, {
-    publicKey: 'C372p1m_voPbDxOfy'
-  })
-  .then((result) => {
-    alert('Message sent successfully');
-    setFormData({
-      name:'',
-      email:'',
-      message:''
-    })
-  })
-  .catch((error) => {
-    alert('Failed to send message');
-    console.error('EmailJS error:', error);
-  })
-  
- }
-  
 
   const testimonies = [
     {
@@ -72,6 +34,7 @@ const [formData, setFormData] = useState({
     <>
    <Navbar />
     <div className="App">   
+
       <section id="personal-info">
           <PersonalInfo />
       </section>
@@ -122,46 +85,11 @@ const [formData, setFormData] = useState({
         <Education />
       </section>
 
-      <section id="contact" className="card contact fade-in">
-        <h3>Contact</h3>
-        <div className="contact-info">
-          <p><i className="fas fa-envelope"></i> Email: pkmiracle36@gmail.com</p>
-          <p><i className="fas fa-phone"></i> Phone: +61473654956</p>
-        </div>
-        <form ref={form} className="contact-form" onSubmit={handleSubmit}>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
-          
-          <button type="submit">Send Message</button>
-        </form>
+      <section id="contact">
+          <Contact />
       </section> 
+
+      <ToastContainer />
     </div>
     <footer className="footer">
     <p>&copy; 2024 Prabin K C. All rights reserved.</p>
