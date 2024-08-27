@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/prabin-portfolio/static/css/main.b4e098ec.css",
-    "main.js": "/prabin-portfolio/static/js/main.e849bb00.js",
-    "static/js/453.ad8d0f49.chunk.js": "/prabin-portfolio/static/js/453.ad8d0f49.chunk.js",
+    "main.css": "/prabin-portfolio/static/css/main.610e563e.css",
+    "main.js": "/prabin-portfolio/static/js/main.f745ad29.js",
     "static/media/fa-solid-900.ttf": "/prabin-portfolio/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/fa-brands-400.ttf": "/prabin-portfolio/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
     "static/media/fa-solid-900.woff2": "/prabin-portfolio/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
@@ -13,12 +12,11 @@
     "static/media/fa-v4compatibility.ttf": "/prabin-portfolio/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/fa-v4compatibility.woff2": "/prabin-portfolio/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/prabin-portfolio/index.html",
-    "main.b4e098ec.css.map": "/prabin-portfolio/static/css/main.b4e098ec.css.map",
-    "main.e849bb00.js.map": "/prabin-portfolio/static/js/main.e849bb00.js.map",
-    "453.ad8d0f49.chunk.js.map": "/prabin-portfolio/static/js/453.ad8d0f49.chunk.js.map"
+    "main.610e563e.css.map": "/prabin-portfolio/static/css/main.610e563e.css.map",
+    "main.f745ad29.js.map": "/prabin-portfolio/static/js/main.f745ad29.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4e098ec.css",
-    "static/js/main.e849bb00.js"
+    "static/css/main.610e563e.css",
+    "static/js/main.f745ad29.js"
   ]
 }
