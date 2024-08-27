@@ -8,7 +8,7 @@ export default function Education() {
     ]
   return (
     <>
-    <div className="card education fade-in">
+    <div className="card education">
         <h3>Education</h3>
         <div className="education-card-container">
        

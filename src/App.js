@@ -3,7 +3,6 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import "./App.css";
 
-import Navbar from "./components/Navbar";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
 import PersonalInfo from "./components/PersonalInfo/PersonalInfo";
@@ -13,46 +12,44 @@ import Contact from "./components/Contact/Contact";
 import Repository from "./components/Repository/Repository";
 import Testimony from "./components/Testimony/Testimony";
 import Footer from "./components/Footer/Footer";
-
+import Navbar from "./components/Navbar/Navbar";
 function App() {
 
   
 
   return (
     <>
-   
-    <div className="App">   
     <Navbar />
+    <div className="App animate-up">   
       <section id="personal-info">
           <PersonalInfo />
       </section>
 
-      <section id="skills">
+      <section id="skills" className="animate-up">
         <Skills />
       </section>
 
-      <section id="experience">
+      <section id="experience" className="animate-up">
         <Experience />
       </section>
 
-
-      <section id="projects">
+      <section id="projects" className="animate-up">
           <Projects />
       </section>
 
-      <section id="testimony">
+      <section id="testimony" className="animate-up">
         <Testimony />
       </section>
 
-      <section id="repositories" >
+      <section id="repositories" className="animate-up" >
        <Repository />
       </section>
 
-      <section id="education">
+      <section id="education" className="animate-up">
         <Education />
       </section>
 
-      <section id="contact">
+      <section id="contact" className="animate-up">
           <Contact />
       </section> 
 

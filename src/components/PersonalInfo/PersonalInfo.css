@@ -68,6 +68,8 @@ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
   }
   
 
+
+
 /* Mobile-First Approach */
 @media (min-width: 600px) {
 

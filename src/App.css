@@ -11,31 +11,10 @@
   justify-content: center;
 }
 
-/* Card Styles */
-.card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  margin-bottom: 20px;
-  padding: 20px;
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  opacity: 0;
-  animation: fadeInUp 0.5s ease-in-out forwards;
-}
-
-.card:hover {
-  transform: perspective(1000px) rotateX(-3deg) rotateY(3deg); /* Subtle hover effect */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
-}
-
-
-
-/* Fade-in Animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
@@ -43,115 +22,23 @@
   }
 }
 
-.footer {
-  background-color: #0072ff; /* Match the navbar background color */
-  color: #fff; /* White text color */
-  padding: 20px;
-  text-align: center;
-  position: relative; /* Ensure it stays within the normal document flow */
-  bottom: 0;
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.animate-up {
+  animation: fadeInUp 1s ease-in-out;
 }
 
-
-/* Social links styling */
-.social-links {
-  margin: 10px 0;
+.animate-up-slow {
+  animation: fadeInUp 2s ease;
 }
-
-.social-links a {
-  color: #fff; /* White color for social links */
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #ff6347; /* Change color on hover */
-}
-
-/* Quick links styling */
-.quick-links {
-  margin: 10px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.quick-links a {
-  color: #fff; /* White color for quick links */
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.quick-links a:hover {
-  color: #ff6347; /* Change color on hover */
-}
-
-
 /* Mobile-First Approach */
 @media (min-width: 600px) {
-  /* For Tablets */
   .App {
     width: 90%;
   }
-
-  .personal-info {
-    /* flex-direction: row; */
-    /* text-align: center; */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-  
-  .profile-photo {
-    width: 150px;
-    height: 150px;
-    margin: 0;
-  }
-  .personal-text{
-    text-align: center;
-    align-items: center;
-  }
-
-  
-
-  .skills-container{
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  }
-
-  .experience-container{
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    column-gap: 20px;
-
-  }
-  .education-card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px;
-  }
-
 }
 
 @media (min-width: 735px){
 
-  .personal-info{
-    grid-template-columns: 30% 70%;
-    column-gap: 10px;
-  }
-  .profile-photo{
-    height: 120px;
-    width: 120px;
-  }
-  .personal-text{
-    text-align: left;
-    align-items:flex-start;
-  }
 }
 
 @media (min-width: 900px) {
@@ -160,26 +47,4 @@
     width: 95%; /* Fill most of the screen */
   }
 
-  .personal-info{
-    grid-template-columns: 15% 85%;
-    padding: 5px;
-  }
-  .profile-photo{
-    height: 100px;
-    width: 100px;
-  }
-  .personal-text{
-    text-align: left;
-    align-items:flex-start;
-  }
-  
-
-  .skills-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    column-gap: 30px;
-    row-gap: 40px;
-  }
-  .skills-container{
-    grid-template-columns: repeat(3);
-  }
 }
