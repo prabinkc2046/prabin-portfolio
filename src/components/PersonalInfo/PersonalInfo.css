@@ -1,0 +1,127 @@
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px;
+    padding: 20px;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-in-out forwards;
+  }
+  
+.card:hover {
+transform: perspective(1000px) rotateX(-3deg) rotateY(3deg); /* Subtle hover effect */
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+}
+
+/* Personal Info Section */
+.personal-info {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .profile-photo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 8px;
+  }
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    background-image: url('../../../public/images/profile.jpeg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease-in-out;
+  
+  }
+  
+  .personal-info:hover .profile-photo {
+    transform: scale(1.1); /* Zoom effect on hover */
+  }
+  
+  .personal-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    padding: 8px;
+    width: 100%;
+    min-width: 100%;
+  }
+  
+  .personal-text h2, p {
+    margin: 0;
+  }
+  
+  .personal-info i {
+    font-size: 24px; /* Size of the icon */
+    color: #0072ff; /* Icon color */
+    margin-right: 10px;
+  }
+  
+
+/* Mobile-First Approach */
+@media (min-width: 600px) {
+
+    .personal-info {
+      /* flex-direction: row; */
+      /* text-align: center; */
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      margin: 0;
+    }
+    .personal-text{
+      text-align: center;
+      align-items: center;
+    }
+   
+  }
+  
+  @media (min-width: 735px){
+  
+    .personal-info{
+      grid-template-columns: 30% 70%;
+      column-gap: 10px;
+    }
+    .profile-photo{
+      height: 120px;
+      width: 120px;
+    }
+    .personal-text{
+      text-align: left;
+      align-items:flex-start;
+    }
+  }
+  
+@media (min-width: 900px) {
+    
+  
+.personal-info{
+    grid-template-columns: 15% 85%;
+    padding: 5px;
+}
+.profile-photo{
+    height: 100px;
+    width: 100px;
+}
+.personal-text{
+    text-align: left;
+    align-items:flex-start;
+}
+    
+  
+  
+  }
+  

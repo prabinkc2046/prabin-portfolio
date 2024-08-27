@@ -11,6 +11,7 @@ import emailjs from '@emailjs/browser';
 
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
+import PersonalInfo from "./components/PersonalInfo/PersonalInfo";
 
 function App() {
 
@@ -84,19 +85,8 @@ const [formData, setFormData] = useState({
     <>
    <Navbar />
     <div className="App">   
-      <section id="personal-info" className="card personal-info fade-in">
-        <div className="profile-photo-container">
-        <img
-          className="profile-photo"
-        />
-        </div>
-        <div className="personal-text">
-          <h2>Prabin K C</h2>
-          <p>
-            I am a passionate system engineer with experience in automation,
-            cloud infrastructure, and security best practices.
-          </p>
-        </div>
+      <section id="personal-info">
+          <PersonalInfo />
       </section>
 
       <section id="skills">

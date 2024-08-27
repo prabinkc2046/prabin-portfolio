@@ -29,61 +29,6 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
 }
 
-/* Personal Info Section */
-.personal-info {
-  margin-top: 80px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.profile-photo-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding: 8px;
-}
-.profile-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  background-image: url('../public/images/profile.jpeg');
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s ease-in-out;
-
-}
-
-.personal-info:hover .profile-photo {
-  transform: scale(1.1); /* Zoom effect on hover */
-}
-
-.personal-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 8px;
-  padding: 8px;
-  width: 100%;
-  min-width: 100%;
-}
-
-.personal-text h2, p {
-  margin: 0;
-}
-
-.personal-info i {
-  font-size: 24px; /* Size of the icon */
-  color: #0072ff; /* Icon color */
-  margin-right: 10px;
-}
-
-/* Skills Section */
-
-
 /* Education Section */
 .education {
   padding: 20px;
