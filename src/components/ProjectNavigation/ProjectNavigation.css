@@ -1,0 +1,49 @@
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px;
+    padding: 20px;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-in-out forwards;
+  }
+  
+.card:hover {
+transform: perspective(1000px) rotateX(-3deg) rotateY(3deg); /* Subtle hover effect */
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+}
+
+
+.project-navigation {
+margin-bottom: 20px;
+}
+
+.project-navigation ul {
+list-style-type: none;
+padding: 0;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+row-gap: 10px;
+}
+
+.project-navigation li {
+margin-bottom: 10px;
+}
+
+.project-navigation a {
+color: #0072ff;
+text-decoration: none;
+}
+
+.project-navigation a:hover {
+text-decoration: underline;
+}
+
+/* Active link style */
+.project-navigation a.active {
+color: #111cea; /* Change this to the desired active color */
+font-weight: bold; /* Optional: Make the active link bold */
+text-decoration: underline;
+}
