@@ -1,0 +1,57 @@
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px;
+    padding: 20px;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-in-out forwards;
+  }
+
+
+  .card:hover {
+    transform: perspective(1000px) rotateX(-3deg) rotateY(3deg); /* Subtle hover effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+  }
+
+  /* Testimony Section */
+.testimony {
+    padding: 20px;
+  }
+  
+  .testimony-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .testimony-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+  }
+  
+  .testimony-card p {
+    margin-bottom: 5px;
+  }
+  
+  .testimony-card strong {
+    color: #0072ff;
+  }
+
+
+/* Mobile-First Approach */
+@media (min-width: 600px) {
+
+  }
+  
+  @media (min-width: 735px){
+  
+  }
+  
+  @media (min-width: 900px) {
+
+  }
