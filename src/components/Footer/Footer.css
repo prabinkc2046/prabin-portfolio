@@ -1,0 +1,76 @@
+.footer {
+    background-color: #0072ff; /* Match the navbar background color */
+    color: #fff; /* White text color */
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Ensure it stays within the normal document flow */
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 8px;
+  }
+  
+  
+  /* Social links styling */
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+  }
+  
+  .social-links a {
+    color: #fff; /* White color for social links */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    padding: 5px;
+  }
+  
+  .social-links a:hover {
+    color: #ff6347; /* Change color on hover */
+  }
+  
+  /* Quick links styling */
+  .quick-links {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+  }
+  
+  .quick-links a {
+    color: #fff; /* White color for quick links */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 3px;
+
+  }
+  
+  .quick-links a:hover {
+    color: #ff6347; /* Change color on hover */
+  }
+
+
+/* Mobile-First Approach */
+@media (min-width: 600px) {
+   
+  }
+  
+  @media (min-width: 735px){
+  
+   
+  }
+  
+  @media (min-width: 900px) {
+    
+  }

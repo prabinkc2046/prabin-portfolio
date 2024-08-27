@@ -43,32 +43,6 @@
   }
 }
 
-/* Testimony Section */
-.testimony {
-  padding: 20px;
-}
-
-.testimony-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.testimony-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-}
-
-.testimony-card p {
-  margin-bottom: 5px;
-}
-
-.testimony-card strong {
-  color: #0072ff;
-}
-
 .footer {
   background-color: #0072ff; /* Match the navbar background color */
   color: #fff; /* White text color */
