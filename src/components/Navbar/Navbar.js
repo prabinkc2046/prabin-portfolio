@@ -43,16 +43,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a
-              href="#projects"
-              className={activeLink === '#projects' ? 'active' : ''}
-              onClick={() => handleLinkClick('#projects')}
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
+          <a
               href="#experience"
               className={activeLink === '#experience' ? 'active' : ''}
               onClick={() => handleLinkClick('#experience')}
@@ -62,29 +53,40 @@ const Navbar = () => {
           </li>
           <li>
             <a
+              href="#projects"
+              className={activeLink === '#projects' ? 'active' : ''}
+              onClick={() => handleLinkClick('#projects')}
+            >
+              Projects
+            </a>
+          </li>
+          <li>
+          <a
+              href="#education"
+              className={activeLink === '#education' ? 'active' : ''}
+              onClick={() => handleLinkClick('#education')}
+            >
+              Education
+            </a>
+            
+          </li>
+          <li>
+          <a
               href="#testimony"
               className={activeLink === '#testimony' ? 'active' : ''}
               onClick={() => handleLinkClick('#testimony')}
             >
               Testimonies
             </a>
+            
           </li>
           <li>
-            <a
+          <a
               href="#contact"
               className={activeLink === '#contact' ? 'active' : ''}
               onClick={() => handleLinkClick('#contact')}
             >
               Contact
-            </a>
-          </li>
-          <li>
-            <a
-              href="#education"
-              className={activeLink === '#education' ? 'active' : ''}
-              onClick={() => handleLinkClick('#education')}
-            >
-              Education
             </a>
           </li>
         </ul>

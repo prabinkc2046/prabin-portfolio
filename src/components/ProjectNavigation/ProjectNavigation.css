@@ -16,7 +16,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   row-gap: 15px;
-
+  position: relative; 
 }
 
 .project-navigation li.project-item {
@@ -29,7 +29,8 @@
   cursor: pointer;
   overflow: hidden;
   z-index: 1;
-  
+  transform: translateZ(0);
+  scroll-margin-top: 50px;
 }
 
 .project-navigation li.project-item::before {
@@ -46,7 +47,7 @@
 }
 
 .project-navigation li.project-item:hover:not(.no-hover) {
-  transform: translateY(-10px) rotateX(10deg) rotateY(-10deg);
+  transform: translateY(-10px);
   box-shadow: 0 25px 35px rgba(0, 0, 0, 0.3);
 }
 
@@ -57,8 +58,9 @@
 .project-navigation a {
   color: #0072ff;
   text-decoration: none;
-  font-size: 0.75rem;
+  font-size: 1rem;
   z-index: 2;
+ 
 }
 
 .project-navigation a:hover {
@@ -72,45 +74,6 @@
   text-decoration: underline;
 }
 
-.project-card {
-  margin-top: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  padding: 25px;
-  box-shadow: 0 2px 4px  rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s box-shadow 0.3s;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.project-card h4 {
-  margin-bottom: 10px;
-}
-
-.links {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
-  border: 1px solid black;
-  gap: 10px;
-}
-.project-card a {
-  color: #0072ff;
-  text-decoration: none;
-}
-
-.project-card a:hover {
-  text-decoration: underline;
-}
 
 
 

@@ -1,30 +1,9 @@
 import React from 'react'
 import './Experience.css'
+import { experience } from '../../CONSTANT'
 
 export default function Experience() {
-    const experience = [
-        {
-          role: "Software Support Technician",
-          company: "Xacom",
-          duration: "June 2021 - June 2022",
-          details: "Performed system health checks, generated reports, and developed scripts to automate monitoring and maintenance tasks, ensuring optimal system performance and uptime.",
-        },
-        {
-          role: "Software Support Technician1",
-          company: "Xacom",
-          duration: "June 2021 - June 2022",
-          details: "Performed system health checks, generated reports, and developed scripts to automate monitoring and maintenance tasks, ensuring optimal system performance and uptime.",
-        },
-        {
-          role: "Software Support Technician2",
-          company: "Xacom",
-          duration: "June 2021 - June 2022",
-          details: "Performed system health checks, generated reports, and developed scripts to automate monitoring and maintenance tasks, ensuring optimal system performance and uptime.",
-        }
-
-        // Add more experiences as needed
-      ];
-    
+     
   return (
     <>
     <div className="card experience">

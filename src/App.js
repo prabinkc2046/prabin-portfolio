@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import "./App.css";
 import './styles/common.css';
+import { projects } from "./CONSTANT";
+
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Skills from "./components/Skills/Skills";
 import PersonalInfo from "./components/PersonalInfo/PersonalInfo";
@@ -16,6 +19,7 @@ import Navbar from "./components/Navbar/Navbar";
 
 import useVisibility from "./hooks/useVisibility";
 import ProjectNavigation from "./components/ProjectNavigation/ProjectNavigation";
+import Modal from "./components/Modal/Modal";
 
 function App() {
   const [isVisiblePersonalInfo, refPersonalInfo] = useVisibility(0.1);
@@ -26,6 +30,9 @@ function App() {
   const [isVisibleRepositories, refRepositories] = useVisibility(0.1);
   const [isVisibleEducation, refEducation] = useVisibility(0.1);
   const [isVisibleContact, refContact] = useVisibility(0.1);
+
+  const [expandedProjectIndex, setExpandedProjectIndex] = useState(null);
+
 
   return (
     <div>
@@ -44,11 +51,8 @@ function App() {
         </section>
 
         <section ref={refProjects} id="projects" className={`${isVisibleProjects ? 'fade-in-up' : ''}`}>
-          <ProjectNavigation />
-        </section>
-
-        <section ref={refTestimony} id="testimony" className={`${isVisibleTestimony ? 'fade-in-up' : ''}`}>
-          <Testimony />
+          <ProjectNavigation projects={projects} expandedProjectIndex={expandedProjectIndex} setExpandedProjectIndex={setExpandedProjectIndex}/>
+          <Modal projects={projects} expandedProjectIndex={expandedProjectIndex} setExpandedProjectIndex={setExpandedProjectIndex}/>
         </section>
 
         <section ref={refRepositories} id="repositories" className={`${isVisibleRepositories ? 'fade-in-up' : ''}`}>
@@ -57,6 +61,10 @@ function App() {
 
         <section ref={refEducation} id="education" className={`${isVisibleEducation ? 'fade-in-up' : ''}`}>
           <Education />
+        </section>
+
+        <section ref={refTestimony} id="testimony" className={`${isVisibleTestimony ? 'fade-in-up' : ''}`}>
+          <Testimony />
         </section>
 
         <section ref={refContact} id="contact" className={`${isVisibleContact ? 'fade-in-up' : ''}`}>
