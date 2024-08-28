@@ -1,24 +1,9 @@
-.card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin-bottom: 20px;
-    padding: 20px;
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    opacity: 0;
-    animation: fadeInUp 0.5s ease-in-out forwards;
-  }
-
-
-  .card:hover {
-    transform: perspective(1000px) rotateX(-3deg) rotateY(3deg); /* Subtle hover effect */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
-  }
-
-  /* Testimony Section */
 .testimony {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
   }
   
   .testimony-container {
@@ -32,6 +17,9 @@
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
   
   .testimony-card p {
@@ -45,7 +33,9 @@
 
 /* Mobile-First Approach */
 @media (min-width: 600px) {
-
+  .testimony{
+    align-items: flex-start;
+  }
   }
   
   @media (min-width: 735px){

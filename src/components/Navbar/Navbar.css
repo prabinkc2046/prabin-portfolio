@@ -4,26 +4,22 @@
     color: #fff; /* White text color */
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    padding: 10px 0; /* Adjust padding to match footer */
-    box-sizing: border-box;
+    z-index: 1000; 
     height: 60px; /* Adjust height if needed */
-    align-self: center;
-    margin: 0 auto;
+    display: flex;
 }
-
 
 /* Container for navbar content */
 .navbar-container {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Match the max width of the .App container */
-    margin: 0 auto; /* Center the container */
-    justify-content: space-between; /* Distribute space between hamburger and menu */
+    height: 100%;
+    justify-content: space-between;
+    max-width: 1200px;
 }
 
 /* Hamburger icon styling */
@@ -75,7 +71,7 @@
 }
 
 /* Responsive styles */
-@media (max-width: 804px) {
+@media (max-width: 899px) {
     .navbar-menu {
         display: none;
         flex-direction: column;
@@ -107,13 +103,41 @@
     }
 }
 
-@media (min-width: 805px) {
-    .navbar-menu {
-        display: flex;
-        justify-content: center;
-    }
-
+@media (min-width: 900px) {
     .navbar-toggle {
         display: none; /* Hide hamburger menu on desktop */
     }
+
+   .navbar{
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed green;
+   }
+    .navbar-container{
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .navbar-menu li {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-menu li a {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    .navbar-menu{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        column-gap: 8px;
+    }
+    
+
+
 }

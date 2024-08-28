@@ -78,6 +78,15 @@ const Navbar = () => {
               Contact
             </a>
           </li>
+          <li>
+            <a
+              href="#education"
+              className={activeLink === '#education' ? 'active' : ''}
+              onClick={() => handleLinkClick('#education')}
+            >
+              Education
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

@@ -1,46 +1,89 @@
-.card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin-bottom: 20px;
-    padding: 20px;
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    opacity: 0;
-    animation: fadeInUp 0.5s ease-in-out forwards;
-  }
-  
-  .card:hover {
-    transform: perspective(1000px) rotateX(-3deg) rotateY(3deg); /* Subtle hover effect */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
-  }
-
 
 /* Contact Section */
 .contact {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .contact-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
   
   .contact-info {
     margin-bottom: 20px;
+    width: 100%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .contact-info p {
+    width: 100%;
     margin: 5px 0;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
+    gap: 10px;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    font-size: 1rem;
+    overflow: hidden;
+  }
+
+  .contact-info p:hover {
+    background-color: #e8f1ff; /* Light blue background on hover */
+    transform: translateX(5px); /* Slight movement to the right on hover */
+  }
+
+  .contact-info a {
+    text-decoration: none;
+    color: inherit; /* Inherit text color from parent */
+    transition: color 0.3s ease, text-decoration-color 0.3s ease; /* Smooth transition for link colors */
+  }
+
+  .contact-info a:hover{
+    text-decoration: underline;
+    text-decoration-color: #0072ff;
+    color: #0056d2; /* Slightly darker blue on hover */
+
   }
   
   .contact-info i {
-    margin-right: 10px;
     font-size: 18px; /* Size of the icon */
     color: #0072ff; /* Icon color */
+    transition: color 0.3s ease; /* Smooth transition for icon color */
+
+  }
+
+  .contact-info i:hover {
+    color: #0056d2; /* Darker blue icon color on hover */
   }
   
+  
+
   .contact-form {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #cce7ff; /* Light blue border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
   }
+  
+  .contact-form:hover {
+    border-color: #0072ff; /* Darker blue border on hover */
+  }
+  
   
   .contact-form label {
     margin-bottom: 5px;
@@ -75,13 +118,40 @@
 
 /* Mobile-First Approach */
 @media (min-width: 600px) {
+.contact{
+  align-items: flex-start;
+}
 
-  }
+.contact-container{
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.contact-info{
+  width: 40%;
+}
+
+
+.contact-container{
+  gap: 20px;
+}
+
+.contact-info p {
+  font-size: 0.8rem;
+}
+}
   
-  @media (min-width: 735px){
-  
-  }
+
   
   @media (min-width: 900px) {
-    
+    .contact-info{
+      width: 60%;
+    }
+
+    .contact-info p {
+      font-size: 1rem;
+    }
+    .contact-container{
+      gap: 30px;
+    }
   }

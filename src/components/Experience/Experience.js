@@ -4,17 +4,24 @@ import './Experience.css'
 export default function Experience() {
     const experience = [
         {
-          role: "System Engineer",
-          company: "TechCorp Solutions",
-          duration: "Jan 2021 - Present",
-          details: "Responsible for managing cloud infrastructure and automating deployments.",
+          role: "Software Support Technician",
+          company: "Xacom",
+          duration: "June 2021 - June 2022",
+          details: "Performed system health checks, generated reports, and developed scripts to automate monitoring and maintenance tasks, ensuring optimal system performance and uptime.",
         },
         {
-          role: "Network Administrator",
-          company: "NetSecure Inc.",
-          duration: "Jun 2018 - Dec 2020",
-          details: "Maintained and secured the company's internal network infrastructure.",
+          role: "Software Support Technician1",
+          company: "Xacom",
+          duration: "June 2021 - June 2022",
+          details: "Performed system health checks, generated reports, and developed scripts to automate monitoring and maintenance tasks, ensuring optimal system performance and uptime.",
         },
+        {
+          role: "Software Support Technician2",
+          company: "Xacom",
+          duration: "June 2021 - June 2022",
+          details: "Performed system health checks, generated reports, and developed scripts to automate monitoring and maintenance tasks, ensuring optimal system performance and uptime.",
+        }
+
         // Add more experiences as needed
       ];
     
@@ -24,7 +31,7 @@ export default function Experience() {
         <h3>Experience</h3>
         <div className="experience-container">
           {experience.map((exp) => (
-            <div className="experience-card" key={exp.role}>
+            <div className="experience-card box-3d" key={exp.role}>
               <h4>{exp.role}</h4>
               <p><strong>Company:</strong> {exp.company}</p>
               <p><strong>Duration:</strong> {exp.duration}</p>

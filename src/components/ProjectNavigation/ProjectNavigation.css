@@ -1,49 +1,134 @@
-.card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin-bottom: 20px;
-    padding: 20px;
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    opacity: 0;
-    animation: fadeInUp 0.5s ease-in-out forwards;
-  }
-  
-.card:hover {
-transform: perspective(1000px) rotateX(-3deg) rotateY(3deg); /* Subtle hover effect */
-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+.project-nav-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-
 .project-navigation {
-margin-bottom: 20px;
+  width: 100%;
 }
 
 .project-navigation ul {
-list-style-type: none;
-padding: 0;
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-row-gap: 10px;
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  row-gap: 15px;
+
 }
 
-.project-navigation li {
-margin-bottom: 10px;
+.project-navigation li.project-item {
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  
+}
+
+.project-navigation li.project-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.project-navigation li.project-item:hover:not(.no-hover) {
+  transform: translateY(-10px) rotateX(10deg) rotateY(-10deg);
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.3);
+}
+
+.project-navigation li.project-item::before {
+  opacity: 1;
 }
 
 .project-navigation a {
-color: #0072ff;
-text-decoration: none;
+  color: #0072ff;
+  text-decoration: none;
+  font-size: 0.75rem;
+  z-index: 2;
 }
 
 .project-navigation a:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Active link style */
 .project-navigation a.active {
-color: #111cea; /* Change this to the desired active color */
-font-weight: bold; /* Optional: Make the active link bold */
-text-decoration: underline;
+  color: #111cea;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.project-card {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 4px  rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s box-shadow 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.project-card h4 {
+  margin-bottom: 10px;
+}
+
+.links {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid black;
+  gap: 10px;
+}
+.project-card a {
+  color: #0072ff;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Disable hover effect when the item is clicked */
+.project-navigation li.no-hover {
+  transform: none;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Retain original shadow */
+}
+
+
+@media (min-width:600px){
+  .project-nav-container{
+    align-items: flex-start;
+  }
+
+  .project-navigation ul {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    row-gap: 20px;
+    column-gap: 10px;
+  }
 }
