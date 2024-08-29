@@ -140,41 +140,41 @@ export const projects = [
       githubLink: "https://github.com/prabinkc2046/Deploying-a-Containerized-Application-with-Ansible",
       icon: faBacon
     },
-    // {
-    //   name: "Ansible Playbook: Package Update, Docker Installation, and Hello-World",
-    //   description: "Automates package updates, Docker installation, and runs a Docker 'hello-world' container.",
-    //   outcome: "Streamlined setup with automated Docker installation and verification.",
-    //   githubLink: "https://github.com/prabinkc2046/install-docker-ansible-demo",
-    //   icon: faBacon
-    // },
-    // {
-    //   name: "Ansible Playbook: Install and Uninstall Nginx on Linode Server",
-    //   description: "Automates Nginx installation and removal on Linode servers.",
-    //   outcome: "Simplified Nginx management with automated deployment and removal.",
-    //   githubLink: "https://github.com/prabinkc2046/Nginx-install-uninstall-Ansible-demo",
-    //   icon: faServer
-    // },
-    // {
-    //   name: "Kubernetes Learning Journey",
-    //   description: "Documents and showcases Kubernetes concepts and practices.",
-    //   outcome: "Detailed notes on Kubernetes fundamentals and practical applications.",
-    //   githubLink: "https://github.com/prabinkc2046/Kubernetes-Learning-Journey",
-    //   icon: faCube
-    // },
-    // {
-    //   name: "Docker Storage Scenario - MySQL Database",
-    //   description: "Demonstrates Docker volume usage for MySQL data persistence.",
-    //   outcome: "Confirmed data retention across container restarts using Docker volumes.",
-    //   githubLink: "https://github.com/prabinkc2046/Docker-Storage-Scenario-MySQL-Database",
-    //   icon: faDatabase
-    // },
-    // {
-    //   name: "BashScript-Challenges",
-    //   description: "Solutions for various bash scripting challenges.",
-    //   outcome: "Showcases proficiency in bash scripting with practical task solutions.",
-    //   githubLink: "https://github.com/prabinkc2046/PrabinKC-BashScriptChallengesSolved.",
-    //   icon: faTools
-    // }
+    {
+      name: "Ansible Playbook: Package Update, Docker Installation, and Hello-World",
+      description: "Automates package updates, Docker installation, and runs a Docker 'hello-world' container.",
+      outcome: "Streamlined setup with automated Docker installation and verification.",
+      githubLink: "https://github.com/prabinkc2046/install-docker-ansible-demo",
+      icon: faBacon
+    },
+    {
+      name: "Ansible Playbook: Install and Uninstall Nginx on Linode Server",
+      description: "Automates Nginx installation and removal on Linode servers.",
+      outcome: "Simplified Nginx management with automated deployment and removal.",
+      githubLink: "https://github.com/prabinkc2046/Nginx-install-uninstall-Ansible-demo",
+      icon: faServer
+    },
+    {
+      name: "Kubernetes Learning Journey",
+      description: "Documents and showcases Kubernetes concepts and practices.",
+      outcome: "Detailed notes on Kubernetes fundamentals and practical applications.",
+      githubLink: "https://github.com/prabinkc2046/Kubernetes-Learning-Journey",
+      icon: faCube
+    },
+    {
+      name: "Docker Storage Scenario - MySQL Database",
+      description: "Demonstrates Docker volume usage for MySQL data persistence.",
+      outcome: "Confirmed data retention across container restarts using Docker volumes.",
+      githubLink: "https://github.com/prabinkc2046/Docker-Storage-Scenario-MySQL-Database",
+      icon: faDatabase
+    },
+    {
+      name: "BashScript-Challenges",
+      description: "Solutions for various bash scripting challenges.",
+      outcome: "Showcases proficiency in bash scripting with practical task solutions.",
+      githubLink: "https://github.com/prabinkc2046/PrabinKC-BashScriptChallengesSolved.",
+      icon: faTools
+    }
   ];
 
   export const experience = [
@@ -230,15 +230,17 @@ export const testimonies = [
     testimony: "Prabin is a kind and generous individual, whose indefatigable positivity was an asset to our workplace. He is passionate about finding novel solutions to systemic challenges and is always eager to learn and explore new technologies.",
   },
   {
+    name:"Claudinei Pereira de Sousa",
+    position:"Software Support Technician, Xacom",
+    testimony:"I have the chance to work alongside Prabin, and what a pleasure to work with. Great contribution to my workloads, always providing good insights and eager to help and lean from experience. I am sure your success is already part of your professional journey. Hope to collaborate with you in other jobs again soon!"
+  },
+  {
     name:"Minol Pamosha",
     position:"RPA Engineer, Accario Global",
     testimony:"I had the pleasure of working with Prabin on an automated script project, and I am incredibly impressed with his expertise in Python. Prabin's technical skills are top-notch, and he demonstrated a deep understanding of automation processes. He was not only efficient in coding but also proactive in troubleshooting and optimizing the script to meet my needs perfectly. Prabin's professionalism, attention to detail, and ability to deliver quality work on time make him an excellent choice for any Python-related project. I highly recommend Prabin for his exceptional skills and dedication to his work."
   },
-  {
-    name:"Claudinei Pereira de Sousa",
-    position:"Software Support Technician, Xacom",
-    testimony:"I have the chance to work alongside Prabin, and what a pleasure to work with. Great contribution to my workloads, always providing good insights and eager to help and lean from experience. I am sure your success is already part of your professional journey. Hope to collaborate with you in other jobs again soon!"
-  }
+  
+  
 
   // Add more testimonies as needed
 ];

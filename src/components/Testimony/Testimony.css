@@ -7,9 +7,10 @@
   }
   
   .testimony-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 5px;
+
   }
   
   .testimony-card {
@@ -36,12 +37,17 @@
   .testimony{
     align-items: flex-start;
   }
+
+  .testimony-container{
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
   }
   
-  @media (min-width: 735px){
   
-  }
   
   @media (min-width: 900px) {
-
+    .testimony-container{
+      grid-template-columns: auto auto auto;
+    }
   }
