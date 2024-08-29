@@ -8,14 +8,11 @@ import {
 
 export default function ProjectNavigation({ projects, setExpandedProjectIndex}) {
 
-
-
   const handleProjectClick = (index) => {
     setExpandedProjectIndex(index);
   };
 
   
-
   return (
     <div className="card project-nav-container">
       <h3>Projects</h3>

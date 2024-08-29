@@ -1,6 +1,7 @@
 html {
   scroll-behavior: auto;
   scroll-padding-top: 80px; /* Adjust based on the height of your navbar */
+  font-size: 16px;
 }
 
 /* Global Styles */

@@ -140,41 +140,41 @@ export const projects = [
       githubLink: "https://github.com/prabinkc2046/Deploying-a-Containerized-Application-with-Ansible",
       icon: faBacon
     },
-    {
-      name: "Ansible Playbook: Package Update, Docker Installation, and Hello-World",
-      description: "Automates package updates, Docker installation, and runs a Docker 'hello-world' container.",
-      outcome: "Streamlined setup with automated Docker installation and verification.",
-      githubLink: "https://github.com/prabinkc2046/install-docker-ansible-demo",
-      icon: faBacon
-    },
-    {
-      name: "Ansible Playbook: Install and Uninstall Nginx on Linode Server",
-      description: "Automates Nginx installation and removal on Linode servers.",
-      outcome: "Simplified Nginx management with automated deployment and removal.",
-      githubLink: "https://github.com/prabinkc2046/Nginx-install-uninstall-Ansible-demo",
-      icon: faServer
-    },
-    {
-      name: "Kubernetes Learning Journey",
-      description: "Documents and showcases Kubernetes concepts and practices.",
-      outcome: "Detailed notes on Kubernetes fundamentals and practical applications.",
-      githubLink: "https://github.com/prabinkc2046/Kubernetes-Learning-Journey",
-      icon: faCube
-    },
-    {
-      name: "Docker Storage Scenario - MySQL Database",
-      description: "Demonstrates Docker volume usage for MySQL data persistence.",
-      outcome: "Confirmed data retention across container restarts using Docker volumes.",
-      githubLink: "https://github.com/prabinkc2046/Docker-Storage-Scenario-MySQL-Database",
-      icon: faDatabase
-    },
-    {
-      name: "BashScript-Challenges",
-      description: "Solutions for various bash scripting challenges.",
-      outcome: "Showcases proficiency in bash scripting with practical task solutions.",
-      githubLink: "https://github.com/prabinkc2046/PrabinKC-BashScriptChallengesSolved.",
-      icon: faTools
-    }
+    // {
+    //   name: "Ansible Playbook: Package Update, Docker Installation, and Hello-World",
+    //   description: "Automates package updates, Docker installation, and runs a Docker 'hello-world' container.",
+    //   outcome: "Streamlined setup with automated Docker installation and verification.",
+    //   githubLink: "https://github.com/prabinkc2046/install-docker-ansible-demo",
+    //   icon: faBacon
+    // },
+    // {
+    //   name: "Ansible Playbook: Install and Uninstall Nginx on Linode Server",
+    //   description: "Automates Nginx installation and removal on Linode servers.",
+    //   outcome: "Simplified Nginx management with automated deployment and removal.",
+    //   githubLink: "https://github.com/prabinkc2046/Nginx-install-uninstall-Ansible-demo",
+    //   icon: faServer
+    // },
+    // {
+    //   name: "Kubernetes Learning Journey",
+    //   description: "Documents and showcases Kubernetes concepts and practices.",
+    //   outcome: "Detailed notes on Kubernetes fundamentals and practical applications.",
+    //   githubLink: "https://github.com/prabinkc2046/Kubernetes-Learning-Journey",
+    //   icon: faCube
+    // },
+    // {
+    //   name: "Docker Storage Scenario - MySQL Database",
+    //   description: "Demonstrates Docker volume usage for MySQL data persistence.",
+    //   outcome: "Confirmed data retention across container restarts using Docker volumes.",
+    //   githubLink: "https://github.com/prabinkc2046/Docker-Storage-Scenario-MySQL-Database",
+    //   icon: faDatabase
+    // },
+    // {
+    //   name: "BashScript-Challenges",
+    //   description: "Solutions for various bash scripting challenges.",
+    //   outcome: "Showcases proficiency in bash scripting with practical task solutions.",
+    //   githubLink: "https://github.com/prabinkc2046/PrabinKC-BashScriptChallengesSolved.",
+    //   icon: faTools
+    // }
   ];
 
   export const experience = [
@@ -182,19 +182,19 @@ export const projects = [
       role: "Software Support Technician",
       company: "Xacom",
       duration: "June 2021 - June 2022",
-      details: "Performed system health checks, generated reports, and developed scripts to automate monitoring and maintenance tasks, ensuring optimal system performance and uptime.",
+      details:"Collaborated with clients, stakeholders, and vendors to manage backups, disaster recovery, and system performance. Documented IT activities and reported on system performance. Worked with developers and support teams to resolve technical issues, escalating complex problems when necessary. Monitored and addressed routine system performance issues to ensure reliability and efficiency."
     },
     {
       role: "DevOps Engineer",
       company: "Self-employed",
       duration: "June 2022- Jan 2023",
-      details:"Optimized workflows and enhanced system reliability by implementing DevOps practices. Automated deployment pipelines with CI/CD tools, and managed cloud infrastructure using Docker, Kubernetes, Ansible, and AWS. Built and maintained scalable, efficient systems, leveraging skills in infrastructure as code and Bash automation to improve operational efficiency."
+      details:"DevOps professional with expertise in CI/CD, infrastructure as code, and cloud technologies. Proficient in Docker, Kubernetes, Ansible, Bash scripting, and AWS. Skilled in optimizing workflows and enhancing system reliability. Ready to collaborate, mentor, and drive business improvements."
     },
     {
       role: "Full Stack Developer",
       company: "Self-employed",
       duration: "Jan 2023 - Present",
-      details:"Self-taught Full Stack Developer who has built responsive web applications using React.js, focusing on state management, routing, and optimizing performance. Developed and integrated back-end services using Node.js and Python, creating APIs and managing databases to support seamless server-side functionality. Eager to bring these skills to new full-stack development challenges."
+      details:"Full Stack Developer skilled in React.js, state management, and performance optimization. Experienced with React, Next.js, Node.js, Express.js, Apollo GraphQL, and Mongoose. Proficient in JavaScript, TypeScript, HTML, CSS, and testing frameworks. Eager to collaborate, mentor, and drive impactful projects in dynamic teams."
     }
 
     // Add more experiences as needed
@@ -203,7 +203,7 @@ export const projects = [
 
 export const skills = [
   { name: "Linux", level: 90, icon: "fas fa-linux" },
-  { name: "Networking", level: 85, icon: "fas fa-network-wired" },
+  { name: "Net working", level: 85, icon: "fas fa-network-wired" },
   { name: "Python", level: 80, icon: "fab fa-python" },
   { name: "Docker", level: 80, icon: "fab fa-docker" },
   { name: "AWS", level: 70, icon: "fab fa-aws" },
@@ -213,14 +213,14 @@ export const skills = [
   { name: "React", level: 85, icon: "fab fa-react" },
   { name: "MongoDB", level: 70, icon: "fas fa-database" },
   { name: "Machine Learning", level: 60, icon: "fas fa-robot" },
-  { name: "Encryption", level: 65, icon: "fas fa-lock" },
+  { name: "En cryption", level: 65, icon: "fas fa-lock" },
   { name: "Git", level: 80, icon: "fab fa-git" },
   { name: "MySQL", level: 75, icon: "fas fa-database" },
   { name: "Windows Server", level: 60, icon: "fas fa-windows" },
   { name: "Ansible", level: 50, icon: "fas fa-cogs" },
   { name: "Node.js", level: 70, icon: "fab fa-node" },
   { name: "Django", level: 70, icon: "fab fa-python" },
-  { name: "Kubernetes", level: 65, icon: "fas fa-cube" }
+  { name: "Kuber netes", level: 65, icon: "fas fa-cube" }
 ];
 
 export const testimonies = [
@@ -236,9 +236,11 @@ export const testimonies = [
   },
   {
     name:"Claudinei Pereira de Sousa",
-    position:"Xacom",
+    position:"Software Support Technician, Xacom",
     testimony:"I have the chance to work alongside Prabin, and what a pleasure to work with. Great contribution to my workloads, always providing good insights and eager to help and lean from experience. I am sure your success is already part of your professional journey. Hope to collaborate with you in other jobs again soon!"
   }
 
   // Add more testimonies as needed
 ];
+
+export const profileIntro = "Dynamic professional skilled in system engineering and full-stack development. Proficient in Python, JavaScript, AWS, and DevOps tools like Docker and Kubernetes. Expert in building robust web apps with React, optimizing performance, and ensuring system reliability. Passionate about teamwork, mentoring, and solving complex challenges to drive business success."

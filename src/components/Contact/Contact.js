@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import './Contact.css';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import CopyButton from '../CopyLink/CopyButton';
 
 export default function Contact() {
   const form = useRef();
@@ -45,15 +46,69 @@ export default function Contact() {
       <div className="card contact">
         <h3>Contact</h3>
         <div className='contact-container'>
-          
-          <div className="contact-info">
-            <p className='box-3d'><i className="fas fa-envelope"></i> Email: pkmiracle36@gmail.com</p>
-            <p className='box-3d'><i className="fas fa-phone"></i> Phone: +61473654956</p>
-            <p className='box-3d'><i className="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/prabin-kc/" target="_blank" rel="noopener noreferrer">Linkedin</a></p>
-            <p className='box-3d'><i className="fab fa-youtube"></i> YouTube: <a href="https://www.youtube.com/@prabin-demo/featured" target="_blank" rel="noopener noreferrer">CodeMind TV</a></p>
-            <p className='box-3d'><i className="fab fa-upwork"></i> Upwork: <a href="https://www.upwork.com/freelancers/~01c69796f65626dcd9?s=1110580755107926016" target="_blank" rel="noopener noreferrer">Upwork</a></p>
-            <p className='box-3d'><i className="fab fa-github"></i> GitHub: <a href="https://github.com/prabinkc2046?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-          </div>
+        <div className="contact-info">
+    <p className='box-3d '>
+      <div className='contact-links'>
+      <i className="fas fa-envelope"></i> pkmiracle36@gmail.com
+      </div>
+    </p>
+    <p className='box-3d'>
+      <div className='contact-links'>
+      <i className="fas fa-phone"> </i> +61473654956
+      </div>
+    </p>
+    <p className='box-3d'>
+      <div className='contact-links'>
+      <i className="fab fa-linkedin"></i>
+      <a href="https://www.linkedin.com/in/prabin-kc/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+     
+      <CopyButton link="https://www.linkedin.com/in/prabin-kc/" />
+     
+    </p>
+    <p className='box-3d'>
+    <div className='contact-links'>
+    <i className="fab fa-youtube"></i>
+    <a href="https://www.youtube.com/@prabin-demo/featured" target="_blank" rel="noopener noreferrer">CodeMind TV</a>
+    </div>
+      <CopyButton link="https://www.youtube.com/@prabin-demo/featured" />
+    </p>
+    <p className='box-3d'>
+     <div className='contact-links'>
+     <i className="fab fa-upwork"></i>
+     <a href="https://www.upwork.com/freelancers/~01c69796f65626dcd9?s=1110580755107926016" target="_blank" rel="noopener noreferrer">Upwork</a>
+     </div>
+      <CopyButton link="https://www.upwork.com/freelancers/~01c69796f65626dcd9?s=1110580755107926016" />
+    </p>
+    <p className='box-3d'>
+     <div className='contact-links'>
+     <i className="fab fa-github"></i>
+      <a href="https://github.com/prabinkc2046?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a>
+     
+     </div>
+      <CopyButton link="https://github.com/prabinkc2046?tab=repositories" />
+    </p>
+    <p className='box-3d'>
+     <div className='contact-links'>
+     <i className="fas fa-briefcase"></i>
+      <a href="https://prabinkc2046.github.io/prabin-portfolio" target="_blank" rel="noopener noreferrer">Portfolio</a>
+     
+     </div>
+      <CopyButton link="https://prabinkc2046.github.io/prabin-portfolio" />
+    </p>
+  </div>
+        {/* <div className="contact-info">
+            <p className='box-3d'><i className="fas fa-envelope"></i>pkmiracle36@gmail.com</p>
+            <p className='box-3d'><i className="fas fa-phone"></i>+61473654956</p>
+            <p className='box-3d'><i className="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/prabin-kc/" target="_blank" rel="noopener noreferrer">Linkedin</a></p>
+            <p className='box-3d'><i className="fab fa-youtube"></i><a href="https://www.youtube.com/@prabin-demo/featured" target="_blank" rel="noopener noreferrer">CodeMind TV</a></p>
+            <p className='box-3d'><i className="fab fa-upwork"></i><a href="https://www.upwork.com/freelancers/~01c69796f65626dcd9?s=1110580755107926016" target="_blank" rel="noopener noreferrer">Upwork</a></p>
+            <p className='box-3d'><i className="fab fa-github"></i><a href="https://github.com/prabinkc2046?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+            <p className='box-3d'><i className="fas fa-briefcase"></i>
+              <a href="https://prabinkc2046.github.io/prabin-portfolio" target="_blank" rel="noopener noreferrer">Portfolio</a>
+
+            </p>
+        </div> */}
 
           <form ref={form} className="contact-form box-3d" onSubmit={handleSubmit}>
             <label htmlFor="name">Name:</label>

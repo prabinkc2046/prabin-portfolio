@@ -1,6 +1,6 @@
 import React from 'react'
 import './PersonalInfo.css'
-
+import { profileIntro } from '../../CONSTANT'
 export default function PersonalInfo() {
   return (
     <>
@@ -13,8 +13,7 @@ export default function PersonalInfo() {
         <div className="personal-text">
           <h2>Prabin K C</h2>
           <p>
-            I am a passionate system engineer with experience in automation,
-            cloud infrastructure, and security best practices.
+            {profileIntro}
           </p>
         </div>
       </div>
