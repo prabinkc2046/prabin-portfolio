@@ -44,9 +44,10 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 100%;
+    width: 60%;
     opacity: 0.85;
     position: relative;
+    border: 1px solid green;
   }
   
   .project-card:hover {
@@ -56,6 +57,7 @@
   
   
   .project-card h4 {
+    margin-top: 35px;
     margin-bottom: 10px;
     font-weight: bolder;
   }
@@ -80,34 +82,6 @@
 
 @media (min-width: 600px){
     .project-card{
-        width: 90%;
+      width: 300px;
     }
 }
-  
-@media (min-width: 700px){
-    .project-card{
-        width: 85%;
-    }
-}
-
-@media (min-width: 800px){
-    .project-card{
-        width: 80%;
-    }
-}
-
-@media (min-width: 900px){
-    .project-card{
-        width: 80%;
-    }
-}
-
-@media (min-width: 1000px){
-    .project-card{
-        width: 60%;
-    }
-}
-  
-  
-  
-  
