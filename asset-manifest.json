@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/prabin-portfolio/static/css/main.d34df780.css",
+    "main.css": "/prabin-portfolio/static/css/main.b7f87b1b.css",
     "main.js": "/prabin-portfolio/static/js/main.64101ab8.js",
     "static/media/master_degree_transcript.jpg": "/prabin-portfolio/static/media/master_degree_transcript.081bb5026ebdb86d840d.jpg",
     "static/media/master_of_networking.png": "/prabin-portfolio/static/media/master_of_networking.ad62dee74dd3c44cbd11.png",
@@ -14,11 +14,11 @@
     "static/media/fa-v4compatibility.ttf": "/prabin-portfolio/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/fa-v4compatibility.woff2": "/prabin-portfolio/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/prabin-portfolio/index.html",
-    "main.d34df780.css.map": "/prabin-portfolio/static/css/main.d34df780.css.map",
+    "main.b7f87b1b.css.map": "/prabin-portfolio/static/css/main.b7f87b1b.css.map",
     "main.64101ab8.js.map": "/prabin-portfolio/static/js/main.64101ab8.js.map"
   },
   "entrypoints": [
-    "static/css/main.d34df780.css",
+    "static/css/main.b7f87b1b.css",
     "static/js/main.64101ab8.js"
   ]
 }
