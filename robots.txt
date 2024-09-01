@@ -1,3 +1,16 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+# Disallow crawling of irrelevant or sensitive areas
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /settings/
+Disallow: /api/
+Disallow: /scripts/
+Disallow: /private/
+Disallow: /temp/
+
+# Allow search engines to access and index all important content sections
+Allow: /
+
+# Reference to the sitemap to ensure all pages are discovered and indexed
+# Sitemap: https://yourwebsite.com/sitemap.xml
