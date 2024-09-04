@@ -4,6 +4,16 @@
     flex-direction: column;
     align-items: center;
     gap:10px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    background-color: var(--primary-bg);
+  }
+
+  .testimony h3 {
+    color: var(--secondary-font-color);
   }
   
   .testimony-container {
@@ -21,6 +31,7 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    background-color: var(--secondary-bg);
   }
   
   .testimony-card p {
@@ -36,6 +47,7 @@
 @media (min-width: 600px) {
   .testimony{
     align-items: flex-start;
+    width: 90%;
   }
 
   .testimony-container{
@@ -47,6 +59,9 @@
   
   
   @media (min-width: 900px) {
+    .testimony{
+      width: 95%;
+    }
     .testimony-container{
       grid-template-columns: auto auto auto;
     }

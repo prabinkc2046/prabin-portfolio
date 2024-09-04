@@ -1,7 +1,5 @@
 /* Base styles for the navbar */
 .navbar {
-    background-color: #0072ff; /* Match the footer background color */
-    color: #fff; /* White text color */
     position: fixed;
     top: 0;
     left: 0;
@@ -10,6 +8,8 @@
     z-index: 1000; 
     height: 60px; /* Adjust height if needed */
     display: flex;
+    background-color: var(--nav-bg);
+    color: var(--secondary-font-color);
 }
 
 /* Container for navbar content */
@@ -42,16 +42,14 @@
     width: 100%;
     justify-content: center; /* Center menu items */
     transition: transform 0.3s ease;
+    background-color: var(--nav-bg);
 }
 
-/* Menu item styling */
-.navbar-menu li {
-    margin: 0 15px; /* Adjust margin between menu items */
-}
+
 
 /* Menu link styling */
 .navbar-menu a {
-    color: #fff; /* White color for menu links */
+    color: #ffffff; /* White color for menu links */
     text-decoration: none;
     padding: 0.5rem 1rem; /* Adjust padding */
     font-size: 1rem;
@@ -60,14 +58,14 @@
 
 /* Active menu link styling */
 .navbar-menu a.active {
-    color: #ff6347; /* Change color for the active link */
-    border-bottom: 4px solid #ff6347; /* Optional: underline active link */
+    color: #ffffff; /* Change color for the active link */
+    border-bottom: 4px solid #ffffff; /* Optional: underline active link */
     font-weight: 900;
 }
 
 /* Menu link hover effect */
 .navbar-menu a:hover {
-    color: #ff6347; /* Change hover color if needed */
+    color: #ffffffb4; /* Change hover color if needed */
 }
 
 /* Responsive styles */
@@ -75,13 +73,11 @@
     .navbar-menu {
         display: none;
         flex-direction: column;
-        background-color: #0072ff; /* Match the navbar background color */
         position: absolute;
         top: 60px; /* Height of the navbar */
         left: 0;
         width: 100%;
         padding: 15px;
-        box-sizing: border-box;
     }
 
     .navbar-menu.active {
@@ -111,24 +107,11 @@
    .navbar{
     justify-content: center;
     align-items: center;
-    border: 1px dashed green;
    }
     .navbar-container{
         justify-content: center;
         align-items: center;
-        padding: 20px;
-    }
-
-    .navbar-menu li {
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .navbar-menu li a {
-        font-size: 18px;
-        line-height: 1.2;
+       
     }
 
     .navbar-menu{
@@ -137,7 +120,17 @@
         grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
         column-gap: 8px;
     }
-    
 
+    .navbar-menu li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .navbar-menu li a {
+        font-size: 18px;
+        line-height: 1.2;
+    }
 
 }

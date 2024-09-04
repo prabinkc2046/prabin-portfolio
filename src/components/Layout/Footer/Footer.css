@@ -1,6 +1,4 @@
 .footer {
-    background-color: #0072ff; /* Match the navbar background color */
-    color: #fff; /* White text color */
     padding: 20px;
     text-align: center;
     position: relative; /* Ensure it stays within the normal document flow */
@@ -12,6 +10,8 @@
     align-items: center;
     justify-content: space-around;
     gap: 8px;
+    background-color: var(--footer-bg);
+    color: #ffffff;
   }
   
   
@@ -33,7 +33,7 @@
   }
   
   .social-links a:hover {
-    color: #ff6347; /* Change color on hover */
+    color: #ffffff6a; /* Change color on hover */
   }
   
   /* Quick links styling */
@@ -63,14 +63,20 @@
 
 /* Mobile-First Approach */
 @media (min-width: 600px) {
-   
+   .footer{
+    width: 100%;
+   }
   }
   
   @media (min-width: 735px){
-  
+    .footer{
+      width: 100%;
+     }
    
   }
   
   @media (min-width: 900px) {
-    
+    .footer{
+      width: 100%;
+     }
   }

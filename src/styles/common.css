@@ -8,7 +8,9 @@
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     opacity: 0;
     animation: fadeInUp 0.5s ease-in-out forwards;
+    color: var(--primary-font-color);
   }
+  
   
   .card:hover {
     transform: perspective(1000px) rotateX(-3deg) rotateY(3deg); /* Subtle hover effect */

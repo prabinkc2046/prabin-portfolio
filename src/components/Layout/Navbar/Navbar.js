@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome CSS
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

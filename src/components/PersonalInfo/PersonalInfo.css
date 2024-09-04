@@ -3,7 +3,16 @@
 .personal-info {
     margin-top: 80px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: auto;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 70px;
+    font-size: 1.1rem;
+    line-height: 2;
+    letter-spacing: 1px;
+    background-color: var(--primary-bg);
+    color: var(--secondary-font-color);
   }
   
   .profile-photo-container{
@@ -36,9 +45,10 @@
     align-items: center;
     text-align: center;
     gap: 8px;
-    padding: 8px;
+    padding: 10px;
     width: 100%;
     min-width: 100%;
+    /* background-color: var(--personal-info-bg); */
   }
   
   .personal-text h2, p {
@@ -52,62 +62,19 @@
   }
   
 
-
-
-/* Mobile-First Approach */
-@media (min-width: 600px) {
-
-    .personal-info {
-      /* flex-direction: row; */
-      /* text-align: center; */
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-    
-    .profile-photo {
-      width: 150px;
-      height: 150px;
-      margin: 0;
-    }
-    .personal-text{
-      text-align: center;
-      align-items: center;
+  /* Mobile-First Approach */
+  @media (min-width: 600px) { 
+    .personal-info{
+      width: 90%;
     }
    
+    
   }
   
-  @media (min-width: 735px){
-  
-    .personal-info{
-      grid-template-columns: 30% 70%;
-      column-gap: 10px;
+  @media (min-width: 900px) {
+    .personal-info {
+      width: 95%;
     }
-    .profile-photo{
-      height: 120px;
-      width: 120px;
-    }
-    .personal-text{
-      text-align: left;
-      align-items:flex-start;
-    }
-  }
-  
-@media (min-width: 900px) {
-    
-  
-.personal-info{
-    grid-template-columns: 15% 85%;
-    padding: 5px;
-}
-.profile-photo{
-    height: 100px;
-    width: 100px;
-}
-.personal-text{
-    text-align: left;
-    align-items:flex-start;
-}
-    
-  
-  
+
   }
   

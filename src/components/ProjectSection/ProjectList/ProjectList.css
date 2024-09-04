@@ -1,0 +1,223 @@
+.project-nav-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--primary-bg);
+}
+
+.project-nav-container h3 {
+  color:var(--secondary-font-color);
+}
+
+/* Navbar for Skills */
+.skills-navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* border: 1px solid red;
+  height: 165px; */
+
+}
+
+.skills-navigation ul {
+  width: 100%;
+  list-style-type: none;
+ display: inline-flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ gap: 5px;
+}
+
+.skills-navigation .skill-item {
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+  overflow: hidden;
+  background-color: var(--secondary-bg);
+  width: 95px;
+  font-size: 0.85rem;
+}
+
+.skills-navigation .skill-item.active {
+  font-weight: bold;
+  background-color: #0072ff;
+  color: #ffffff;
+}
+
+.skills-navigation .skill-item:hover{
+  background:linear-gradient(to right, #869db4, #317bc4); /* Light blue background on hover */
+}
+.project-count {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.project-count .count {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 4px;
+  color: #007bff; /* Primary color */
+}
+
+.dots::after {
+  content: '';
+  margin-left: 5px;
+  display: inline-block;
+  animation: dots 2.5s steps(3, end)  2;/* Apply animation */
+}
+
+@keyframes dots {
+  0% {
+    content: '';
+  }
+  33% {
+    content: '.';
+  }
+  66% {
+    content: '. .';
+  }
+  100% {
+    content: '. . .';
+  }
+}
+
+.project-navigation {
+  width: 100%;
+}
+
+.project-navigation ul {
+  list-style-type: none;
+  padding: 10px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  row-gap: 15px;
+  column-gap: 40px;
+  /* justify-content: space-between; */
+  overflow: hidden;
+  width: 100%;
+  margin-top: 30px;
+
+}
+
+.project-navigation li.project-item {
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 1s ease, box-shadow 1s ease;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transform: translateZ(0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background-color: var(--secondary-bg);
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 5px;
+  padding: 20px;
+  text-align: left;
+  font-size: 0.8rem;
+  max-height: 120px;
+  color: var(--secondary-font-color);
+}
+
+.project-navigation li.project-item:hover {
+  transform: scale(2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.project-navigation li.project-item .project-icon {
+  color: #0072ff;
+}
+
+.project-item {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Slightly moved down */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
+
+@media (min-width:600px){
+  .skills-navigation .skill-item{
+    width: 100px;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  .project-nav-container{
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .project-navigation ul {
+    column-gap: 20px;
+    padding: 10px;
+  }
+
+  .project-navigation li.project-item{
+    width: 45%;
+    height: 200px;
+    padding: 10px;
+    font-size: 0.95rem;
+
+  }
+
+ 
+
+}
+
+
+
+@media (min-width:800px){
+  .skills-navigation .skill-item{
+    width: 110px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  .project-nav-container{
+    width: 95%;
+    align-items: flex-start;
+  }
+
+  .project-navigation ul {
+    column-gap: 20px;
+    padding: 10px;
+  }
+
+  .project-navigation li.project-item{
+    width: 200px;
+    height: 300px;
+    font-size: 1rem;
+    padding: 20px;
+   
+  }
+
+ 
+
+}

@@ -1,18 +1,23 @@
 .repositories {
+    width: 100%;
+    margin: 0 auto;
     padding: 20px;
     text-align: center;
+    background-color: var(--primary-bg);
+    color: var(--secondary-font-color);
   }
 
 
 /* Mobile-First Approach */
 @media (min-width: 600px) {
-
+  .repositories{
+    width: 90%;
   }
+}
   
-  @media (min-width: 735px){
-  
+ 
+@media (min-width: 900px) {
+  .repositories{
+    width: 95%;
   }
-  
-  @media (min-width: 900px) {
-   
-  }
+}

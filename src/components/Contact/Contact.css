@@ -6,6 +6,14 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--primary-bg);
+    color: var(--primary-font-color);
+  }
+
+  .contact h3 {
+    color: var(--secondary-font-color);
   }
 
   .contact-container {
@@ -22,7 +30,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3px;
+    gap: 10px;
     max-width: 500px;
   }
 
@@ -37,8 +45,9 @@
     font-size: 5px;
     min-width: 225px;
     overflow: hidden;
-    max-width: 90%;
+    max-width: 100%;
     min-height: 56px;
+    background-color: var(--secondary-bg);
   }
 
   .contact-links{
@@ -56,13 +65,12 @@
 
 
   .contact-info p:hover {
-    background-color: #e8f1ff; /* Light blue background on hover */
+    background:linear-gradient(to right, #869db4, #317bc4); /* Light blue background on hover */
     transform: translateX(20px); /* Slight movement to the right on hover */
   }
 
   .contact-info a {
     text-decoration: none;
-    color: #0d80f4; /* Inherit text color from parent */
     transition: color 0.3s ease, text-decoration-color 0.3s ease; /* Smooth transition for link colors */
   }
 
@@ -86,20 +94,15 @@
     flex-direction: column;
     width: 100%;
     padding: 1.5rem;
-    border: 2px solid #cce7ff; /* Light blue border */
     border-radius: 8px; /* Rounded corners */
-    background-color: #ffffff; /* White background */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
     max-width: 500px;
     min-width: 100px;
+    background-color: var(--secondary-bg);
   }
 
   .contact-form label, button {
     font-size: 1rem;
-  }
-  
-  .contact-form:hover {
-    border-color: #0072ff; /* Darker blue border on hover */
   }
   
   
@@ -115,6 +118,8 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    background-color: #cac4c4;
+    color: #000000;
   }
   
   .contact-form button {
@@ -137,12 +142,14 @@
 /* Mobile-First Approach */
 @media (min-width: 600px) {
   .contact{
+    width: 90%;
     align-items: flex-start;
   }
 
   .contact-container{
     flex-direction: row;
     align-items: flex-start;
+    gap: 20px;
   }
 
   .contact-links{
@@ -159,14 +166,18 @@
 
   
   @media (min-width: 900px) {
-   
+   .contact{
+    width: 95%;
+   }
     .contact-info{
       align-items: flex-start;
     }
 
     .contact-container{
       justify-content: flex-start;
+      gap: 40px;
     }
+  
     .contact{
       align-items: flex-start
     }

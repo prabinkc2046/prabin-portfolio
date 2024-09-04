@@ -7,13 +7,12 @@ html {
 /* Global Styles */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f4f4f4; /* Ensure this color is defined in hex to avoid inconsistencies */
-  color: #000; /* Ensure a default text color is set */
+  color: var(--primary-font-color); /* Ensure a default text color is set */
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
+  background-color: var(--body-bg);
+  ;
 }
 
 /* Resets */
@@ -35,6 +34,24 @@ body {
   color: inherit;
   text-rendering: optimizeLegibility; /* Improve text rendering */
   -webkit-font-smoothing: antialiased; /* Improve font smoothing on macOS and iOS */
+  -webkit-tap-highlight-color: transparent;
 }
+
+
+:root {
+  /* Background Colors */
+  --body-bg: #f0f0f0; /* #00000099 */
+  --nav-bg: #333333;
+  --footer-bg: #333333;
+  --primary-bg: #ffffff;
+  --secondary-bg: #d9d9d9;
+  --accent-bg: #c0c0c0;
+  /* Font Colors */
+  --primary-font-color:  #333333; /* Gray */
+  --secondary-font-color: #000000; /* Mid gray */
+ 
+
+}
+
 
 

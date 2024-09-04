@@ -1,83 +1,97 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import "./App.css";
 import './styles/common.css';
-import { projects } from "./CONSTANT";
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
-import Skills from "./components/Skills/Skills";
+// Import your components
+import Navbar from "./components/Layout/Navbar/Navbar";
+import ListSkills from "./components/SkillSection/ListSkills/ListSkills";
 import PersonalInfo from "./components/PersonalInfo/PersonalInfo";
 import Experience from "./components/Experience/Experience";
 import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
 import Repository from "./components/Repository/Repository";
 import Testimony from "./components/Testimony/Testimony";
-import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar/Navbar";
-
-import useVisibility from "./hooks/useVisibility";
-import ProjectNavigation from "./components/ProjectNavigation/ProjectNavigation";
-import Modal from "./components/Modal/Modal";
-
+import Footer from "./components/Layout/Footer/Footer";
+// Import VisibilitySensor from react-visibility-sensor
+import VisibilitySensor from 'react-visibility-sensor';
+import ProjectList from "./components/ProjectSection/ProjectList/ProjectList";
 function App() {
-  const [isVisiblePersonalInfo, refPersonalInfo] = useVisibility(0.1);
-  const [isVisibleSkills, refSkills] = useVisibility(0.1);
-  const [isVisibleExperience, refExperience] = useVisibility(0.1);
-  const [isVisibleProjects, refProjects] = useVisibility(0.1);
-  const [isVisibleTestimony, refTestimony] = useVisibility(0.1);
-  const [isVisibleRepositories, refRepositories] = useVisibility(0.1);
-  const [isVisibleEducation, refEducation] = useVisibility(0.1);
-  const [isVisibleContact, refContact] = useVisibility(0.1);
-
-  const [expandedProjectIndex, setExpandedProjectIndex] = useState(null);
-
-
+ 
   return (
-    <div>
+  
+    <>
       <Navbar />
       <div className="App">   
-        <section ref={refPersonalInfo} id="personal-info" className={`${isVisiblePersonalInfo ? 'fade-in-up' : ''}`}>
-          <PersonalInfo />
-        </section>
+        <VisibilitySensor partialVisibility>
+          {({ isVisible }) => (
+            <section className={`${isVisible ? 'fade-in-up' : ''}`} id="personal-info">
+              <PersonalInfo />
+            </section>
+          )}
+        </VisibilitySensor>
 
-        <section ref={refSkills} id="skills" className={`${isVisibleSkills ? 'fade-in-up' : ''}`}>
-          <Skills />
-        </section>
+        <VisibilitySensor partialVisibility>
+          {({ isVisible }) => (
+            <section className={`${isVisible ? 'fade-in-up' : ''}`} id="skills">
+              <ListSkills />
+            </section>
+          )}
+        </VisibilitySensor>
 
-        <section ref={refExperience} id="experience" className={`${isVisibleExperience ? 'fade-in-up' : ''}`}>
-          <Experience />
-        </section>
+        <VisibilitySensor partialVisibility>
+          {({ isVisible }) => (
+            <section className={`${isVisible ? 'fade-in-up' : ''}`} id="experience">
+              <Experience />
+            </section>
+          )}
+        </VisibilitySensor>
 
-        <section ref={refProjects} id="projects" className={`${isVisibleProjects ? 'fade-in-up' : ''}`}>
-          <ProjectNavigation projects={projects} expandedProjectIndex={expandedProjectIndex} setExpandedProjectIndex={setExpandedProjectIndex}/>
-          <Modal projects={projects} expandedProjectIndex={expandedProjectIndex} setExpandedProjectIndex={setExpandedProjectIndex}/>
-        </section>
+        <VisibilitySensor partialVisibility>
+          {({ isVisible }) => (
+            <section className={`${isVisible ? 'fade-in-up' : ''}`} id="projects">
+              <ProjectList />
+            </section>
+          )}
+        </VisibilitySensor>
 
-        <section ref={refRepositories} id="repositories" className={`${isVisibleRepositories ? 'fade-in-up' : ''}`}>
-          <Repository />
-        </section>
+        <VisibilitySensor partialVisibility>
+          {({ isVisible }) => (
+            <section className={`${isVisible ? 'fade-in-up' : ''}`} id="repositories">
+              <Repository />
+            </section>
+          )}
+        </VisibilitySensor>
 
-        <section ref={refEducation} id="education" className={`${isVisibleEducation ? 'fade-in-up' : ''}`}>
-          <Education />
-        </section>
+        <VisibilitySensor partialVisibility>
+          {({ isVisible }) => (
+            <section className={`${isVisible ? 'fade-in-up' : ''}`} id="education">
+              <Education />
+            </section>
+          )}
+        </VisibilitySensor>
 
-        <section ref={refTestimony} id="testimony" className={`${isVisibleTestimony ? 'fade-in-up' : ''}`}>
-          <Testimony />
-        </section>
+        <VisibilitySensor partialVisibility>
+          {({ isVisible }) => (
+            <section className={`${isVisible ? 'fade-in-up' : ''}`} id="testimony">
+              <Testimony />
+            </section>
+          )}
+        </VisibilitySensor>
 
-        <section ref={refContact} id="contact" className={`${isVisibleContact ? 'fade-in-up' : ''}`}>
-          <Contact />
-        </section> 
+        <VisibilitySensor partialVisibility>
+          {({ isVisible }) => (
+            <section className={`${isVisible ? 'fade-in-up' : ''}`} id="contact">
+              <Contact />
+            </section>
+          )}
+        </VisibilitySensor>
 
         <ToastContainer />
       </div>
-
-      <footer>
-        <Footer />
-      </footer>
-    </div>
+      <Footer /> 
+    </>
   );
 }
 
