@@ -1,0 +1,27 @@
+.expandable-paragraph {
+    max-height: 6em; /* Limit height to show only a few lines initially */
+    overflow: hidden; /* Hide overflowing content */
+    cursor: pointer;
+    position: relative;
+    
+  }
+  
+  .expandable-paragraph::after {
+    content: 'Show more'; /* Text to indicate expandable content */
+    background: linear-gradient(to right, transparent, white); /* Gradient effect to fade text */
+    padding-left: 5px;
+    font-size: 0.8em;
+    color: #007bff;
+    display: inline-block;
+    pointer-events: none; /* Ensures only the paragraph is clickable */
+    opacity: 0.6; /* Subtle visual hint */
+  }
+
+  .expandable-paragraph.expanded {
+    max-height: 100vh; /* Expand to show full content */
+    transition: max-height 2s ease;
+  }
+  .expandable-paragraph.expanded::after {
+    content: 'Show less'; /* Remove content when expanded */
+
+  }

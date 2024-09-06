@@ -1,32 +1,49 @@
 import React, { useEffect, useState } from 'react';
 import './ListSkills.css';
 import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome CSS
-import { categorizedSkills } from '../../../CONSTANT';
+import { categorizedSkills, defaultSkillArea } from '../../../CONSTANT';
 import Skill from '../Skill/Skill';
+import ScrollToTop from '../../UtilityComponent/ScrollToSomewhere/ScrollToSomewhere';
+import ScrollToSomewhere from '../../UtilityComponent/ScrollToSomewhere/ScrollToSomewhere';
 
 export default function ListSkills() {
-  const [openSkill, setOpenSkill] = useState(null); // State to track which card is open
+  const [selectedArea, setSelectedArea] = useState(defaultSkillArea);
 
-  // Handler to toggle the open skill card
-  const handleSkillClick = (relatedArea) => {
-    // If the clicked item is already open, close it. Otherwise, open it.
-    setOpenSkill(openSkill === relatedArea ? null : relatedArea);
-  };
+  // Get unique skill area
+  const skillArea = ['All', ...new Set(categorizedSkills.map(area => area.relatedArea))];
 
+  // Filter skill area based on the selected skill area
+  const filteredSkillArea = selectedArea === 'All' ? categorizedSkills : categorizedSkills.filter(area => area.relatedArea === selectedArea)
+  
   return (
     <div className="skills card">
-      <h3>Technical Skills</h3>
+      <h3 id='technical-skills-title'>Technical Skills</h3>
+
+      {/* Navbar for skill area */}
+      <nav className='portfolio-section-navbar'>
+        {skillArea.map(area => (
+          <button
+          key={area}
+          className={`portfolio-section-nav-item ${selectedArea === area ? 'active' : ''}`}
+          onClick={() => setSelectedArea(area)}
+          >
+            {area}
+          </button>
+        ))}
+      </nav>
       <div className="skills-area-container">
-        {categorizedSkills.map((category) => (
+        {filteredSkillArea.map((skillGroup) => (
           <Skill
-          key={category.relatedArea}
-          isOpen={openSkill === category.relatedArea}
-          onSkillClick = {() => handleSkillClick(category.relatedArea)}
-          category={category}
-          setOpenSkill={setOpenSkill}
+          key={skillGroup.relatedArea}
+          isOpen={selectedArea === 'All' || selectedArea === skillGroup.relatedArea}
+          skillGroup={skillGroup}
           />
         ))}
       </div>
+      
+
+    {/* Show go to top button only when All skills is selected */}
+    {selectedArea === 'All' &&  <ScrollToSomewhere label={'Back to Top'} id={'technical-skills-title'}/>}
     </div>
   );
 }

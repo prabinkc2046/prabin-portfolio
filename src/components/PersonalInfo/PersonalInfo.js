@@ -1,6 +1,7 @@
 import React from 'react'
 import './PersonalInfo.css'
 import { profileIntro } from '../../CONSTANT'
+import ExpandableParagraph from '../UtilityComponent/ExpandableParagraph/ExpandableParagraph'
 export default function PersonalInfo() {
   return (
     <>
@@ -12,9 +13,14 @@ export default function PersonalInfo() {
         </div>
         <div className="personal-text">
           <h2>Prabin K C</h2>
-          <p>
+          {/* <p>
             {profileIntro}
-          </p>
+          </p> */}
+
+          <ExpandableParagraph 
+          text={profileIntro}
+          wordsCount={5}
+          />
         </div>
       </div>
     </>

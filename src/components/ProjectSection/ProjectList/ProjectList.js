@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ProjectDetails from '../ProjectDetails/ProjectDetails';
 import Modal from '../../Modal/Modal';
 import { projects } from '../../../CONSTANT';
+import ScrollToSomewhere from '../../UtilityComponent/ScrollToSomewhere/ScrollToSomewhere';
+
 
 export default function ProjectList() {
   const [expandedProjectIndex, setExpandedProjectIndex] = useState(null);
-  const [selectedSkill, setSelectedSkill] = useState('Linux');
-  const [animationKey, setAnimationKey] = useState(0); // New state for animation key
+  const [selectedSkill, setSelectedSkill] = useState('Web FrameWorks');
 
   const skills = [
     "All",
@@ -39,7 +40,6 @@ export default function ProjectList() {
   const handleSkillChange = (skill) => {
     setSelectedSkill(skill);
     setExpandedProjectIndex(null); // Close any open project details
-    setAnimationKey((prevKey) => prevKey + 1); // Update animation key to restart animation
   };
 
   // Filter projects based on the selected skill
@@ -53,7 +53,7 @@ export default function ProjectList() {
   return (
     <>
       <div className="card project-nav-container">
-        <h3>Projects</h3>
+        <h3 id='project-title'>Projects</h3>
         {/* Navbar for Skills */}
         <nav className="skills-navigation">
           <ul>
@@ -72,7 +72,6 @@ export default function ProjectList() {
         {/* Display project count with animation */}
         <p className='project-count'>
           Showing <span className='count'>{projectCount}</span> project{projectCount !== 1 ? 's' : ''}
-          <span key={animationKey} className='dots'></span> {/* Apply animation key here */}
         </p>
 
         {/* Project List */}
@@ -100,6 +99,13 @@ export default function ProjectList() {
             ))}
           </ul>
         </nav>
+        {selectedSkill === 'All' && (
+          <ScrollToSomewhere 
+          label={'Back To Top'} 
+          id={'project-title'}
+          delayTime={10000}
+          />
+        )}
       </div>
 
       {/* Modal for Project Details */}

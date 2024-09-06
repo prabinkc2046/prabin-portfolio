@@ -49,8 +49,9 @@ body {
   /* Font Colors */
   --primary-font-color:  #333333; /* Gray */
   --secondary-font-color: #000000; /* Mid gray */
- 
-
+  --small-screen-font-size: 0.85rem;
+  --medium-screen-font-size: 0.9rem;
+  --big-screen-font-size: 1rem;
 }
 
 
